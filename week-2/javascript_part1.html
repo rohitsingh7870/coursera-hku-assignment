@@ -23,6 +23,11 @@
 				if (input_text == color[target]) {
 					finished = true;
 				}
+
+				if ((input_text != "Aqua") && (input_text != "Blue") && (input_text != "Coral") && (input_text != "Cyan") && (input_text != "Gold") && (input_text != "Green") && (input_text != "Indigo") && (input_text != "Magenta") && (input_text != "Olive") && (input_text != "Pink") && (input_text != "Red") && (input_text != "Salmon") && (input_text != "Silver") && (input_text != "Violet") && (input_text != "Yellow")) {
+					alert("Color entered by you does not exist in my list or you have entered wrong Spelling of color  :/ ");
+					finished = false;
+				}
 			}
 
 			function check_guess() {
