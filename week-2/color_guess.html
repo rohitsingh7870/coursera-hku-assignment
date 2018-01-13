@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Guessing Game</title>
+</head>
+<body onload="do_game()">
+	<script>
+		var target;
+		var guess_input_text;
+		var input_guess;
+		var finished = false;
+		var guess = 0;
+
+		function do_game() 
+		{
+			var random = Math.random() * 100;
+			var random_int = Math.floor(random);
+			target = random_int + 1;
+
+			while(!finished)
+			{
+				guess_input_text = prompt("Enter any number in the range of 1 - 100.\n\n Let's see your Guess");
+				input_guess = parseInt(guess_input_text);
+				guess += 1;
+				finished = check_random();
+			}
+
+			function check_random() 
+			{
+				if (isNaN(input_guess)) {
+					alert("Entered value is not an integer, please enter the valid integer.\n");
+					return false;
+				}
+
+				if ((input_guess < 1) || (input_guess > 100)) {
+					alert("Your Inputed integer is not in the range of 1 - 100, please enter valid number\n");
+					return false;
+				}
+
+				if (input_guess < target) {
+					alert("Your Entered Value is Less than the target, please enter value greater than that.\n");
+					return false;
+				}
+
+				if (input_guess > target) {
+					alert("Your Entered Value is Greater than the target, please enter value less than that.\n");
+					return false;
+				}
+
+				if (input_guess == target) {
+					alert("Yeah, You Guessed correct. \n\n The Target was " + target + ".\n\n It took you " + guess + " times for correct Guess\n\n");
+					return true;
+				}
+			}
+		} 
+	</script>
+</body>
+</html>

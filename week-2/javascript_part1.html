@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Guessing Game</title>
+</head>
+<body onload="do_game()">
+	<script>
+		var target;
+		var input_text;
+		var finished = false;
+		var count = 0;
+		function do_game() {
+			var color = ["Aqua", "Blue", "Coral", "Cyan", "Gold", "Green", "Indigo", "Magenta", "Olive", "Pink", "Red", "Salmon", "Silver", "Violet", "Yellow"];
+			var random = Math.random() * color.length;
+			var random_int = Math.floor(random);
+			target = random_int;
+
+			alert(color[target]);
+
+			while (!finished)
+			{
+				input_text = prompt("Enter any color from the below list:\n\n Aqua, Blue, Coral, Cyan, Gold, Green, Indigo, Magenta, Olive, Pink, Red, Salmon, Silver, Violet, Yellow.\n\n Guess the color, I'm thinking of!\n");
+				if (input_text == color[target]) {
+					finished = true;
+				}
+			}
+
+			function check_guess() {
+				// body...
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Guessing Game</title>
+</head>
+<body onload="do_game()">
+
+	<h1 style="text-align: center; margin-top: 50px;"></h1>
+
+	<script>
+		var target;
+		var input_text;
+		var finished = false;
+		var count = 0;
+		function do_game() {
+			var color = ["Aqua", "Blue", "Coral", "Cyan", "Gold", "Green", "Indigo", "Magenta", "Olive", "Pink", "Red", "Salmon", "Silver", "Violet", "Yellow"];
+			var random = Math.random() * color.length;
+			var random_int = Math.floor(random);
+			target = random_int;
+
+
+			while (!finished)
+			{
+				input_text = prompt("Enter any color from the below list:\n\n Aqua, Blue, Coral, Cyan, Gold, Green, Indigo, Magenta, Olive, Pink, Red, Salmon, Silver, Violet, Yellow.\n\n Guess the color, I'm thinking of!\n");
+				count += 1;
+				finished = check_guess();
+				document.getElementsByTagName("body")[0].style.background = color[target];
+				document.getElementsByTagName('h1')[0].innerHTML = "Voila! You did it...."
+			}
+
+			function check_guess() {
+
+				if ((input_text != "Aqua") && (input_text != "Blue") && (input_text != "Coral") && (input_text != "Cyan") && (input_text != "Gold") && (input_text != "Green") && (input_text != "Indigo") && (input_text != "Magenta") && (input_text != "Olive") && (input_text != "Pink") && (input_text != "Red") && (input_text != "Salmon") && (input_text != "Silver") && (input_text != "Violet") && (input_text != "Yellow")) {
+					alert("Color entered by you does not exist in my list or you have entered wrong Spelling of color  :/ ");
+					return false;
+				}
+
+				if (input_text == color[target]) {
+					alert("Yeah, You Guessed correct. \n\n My Color was " + color[target] + ".\n\n It took you " + count + " times for correct Guess  :)\n\n");
+					return true;
+				}
+
+				if (input_text < color[target]) {
+					alert("Your Entered color is Alphabetically smaller than my Guessed Color, Please Enter Color of Higher Order  :/ \n");
+					return false;
+				}
+
+				if (input_text > color[target]) {
+					alert("Your Entered color is Alphabetically greater than my Guessed Color, Please Enter Color of Lower Order  :/\n");
+					return false;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
