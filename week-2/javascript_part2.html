@@ -13,7 +13,7 @@
 		var finished = false;
 		var count = 0;
 		function do_game() {
-			var color = ["Aqua", "Blue", "Coral", "Cyan", "Gold", "Green", "Indigo", "Magenta", "Olive", "Pink", "Red", "Salmon", "Silver", "Violet", "Yellow"];
+			var color = ["aqua", "blue", "coral", "cyan", "gold", "green", "indigo", "magenta", "olive", "pink", "red", "salmon", "silver", "violet", "yellow"];
 			var random = Math.random() * color.length;
 			var random_int = Math.floor(random);
 			target = random_int;
@@ -21,7 +21,7 @@
 
 			while (!finished)
 			{
-				input_text = prompt("Enter any color from the below list:\n\n Aqua, Blue, Coral, Cyan, Gold, Green, Indigo, Magenta, Olive, Pink, Red, Salmon, Silver, Violet, Yellow.\n\n Guess the color, I'm thinking of!\n");
+				input_text = prompt("Enter any color from the below list:\n\n aqua, blue, coral, cyan, gold, green, indigo, magenta, olive, pink, red, salmon, silver, violet, yellow.\n\n Guess the color, I'm thinking of!\n");
 				count += 1;
 				finished = check_guess();
 				document.getElementsByTagName("body")[0].style.background = color[target];
@@ -30,14 +30,14 @@
 
 			function check_guess() {
 
-				if ((input_text != "Aqua") && (input_text != "Blue") && (input_text != "Coral") && (input_text != "Cyan") && (input_text != "Gold") && (input_text != "Green") && (input_text != "Indigo") && (input_text != "Magenta") && (input_text != "Olive") && (input_text != "Pink") && (input_text != "Red") && (input_text != "Salmon") && (input_text != "Silver") && (input_text != "Violet") && (input_text != "Yellow")) {
-					alert("Color entered by you does not exist in my list or you have entered wrong Spelling of color  :/ ");
-					return false;
-				}
-
 				if (input_text == color[target]) {
 					alert("Yeah, You Guessed correct. \n\n My Color was " + color[target] + ".\n\n It took you " + count + " times for correct Guess  :)\n\n");
 					return true;
+				}
+
+				if (color.indexOf(input_text) == -1) {
+					alert("Color entered by you does not exist in my list or you have entered wrong Spelling of color  :/ ");
+					return false;
 				}
 
 				if (input_text < color[target]) {
