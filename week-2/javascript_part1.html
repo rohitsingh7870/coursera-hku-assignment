@@ -4,6 +4,9 @@
 	<title>Color Guessing Game</title>
 </head>
 <body onload="do_game()">
+
+	<h1 style="text-align: center; margin-top: 60px;"></h1>
+	
 	<script>
 		var target;
 		var input_text;
@@ -28,6 +31,8 @@
 					alert("Color entered by you does not exist in my list or you have entered wrong Spelling of color  :/ ");
 					finished = false;
 				}
+
+				document.getElementsByTagName('h1')[0].innerHTML = "Game Over";
 			}
 
 			function check_guess() {
