@@ -4,6 +4,10 @@
 	<title>Number Guessing Game</title>
 </head>
 <body onload="do_game()">
+
+	<h1 style="text-align: center; margin-top: 50px;"></h1>
+	<h2 style="text-align: center; margin-top: 50px;"></h2>
+
 	<script>
 		var target;
 		var guess_input_text;
@@ -23,6 +27,9 @@
 				input_guess = parseInt(guess_input_text);
 				guess += 1;
 				finished = check_random();
+
+				document.getElementsByTagName('h1')[0].innerHTML = "Voila! You did it....";
+				document.getElementsByTagName('h2')[0].innerHTML = "Game Over.!";
 			}
 
 			function check_random() 
