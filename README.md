@@ -6,6 +6,12 @@
 
 *You can click [here](https://www.coursera.org/learn/html-css-javascript/home/welcome) to further explore about the course and join if interested.*
 
+**_Below are the links to move to respective weeks assignments_**
+
+>* [Week 1](http://rishavpandey.me/coursera-hku-assignment/week-1/)
+>* [Week 2](http://rishavpandey.me/coursera-hku-assignment/week-2/)
+>* [Week 3](#)
+
 ## Attention:  
 
 **Recommended Course for Begineers in Web Development**
