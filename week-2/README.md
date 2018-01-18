@@ -8,8 +8,8 @@
 
 Click below to begin
 
-- [part 1](http://rishavpandey.me/coursera-hku-assignment/week-2/javascript_part1.html)
+- [Part 1](http://rishavpandey.me/coursera-hku-assignment/week-2/javascript_part1.html)
 
-- [part 2](http://rishavpandey.me/coursera-hku-assignment/week-2/javascript_part2.html)
+- [Part 2, FINAL GAME](http://rishavpandey.me/coursera-hku-assignment/week-2/javascript_part2.html)
 
-- [**Optional** Number Guessing Game](http://rishavpandey.me/coursera-hku-assignment/week-2/number_guess.html)
+- [**_Optional_** Number Guessing Game](http://rishavpandey.me/coursera-hku-assignment/week-2/number_guess.html)
