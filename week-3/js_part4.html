@@ -1,0 +1,102 @@
+<!-- PART 1 STARTS -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 3 Assignment</title>
+	<style>
+		* {
+			margin-bottom: 0px; 
+		}
+		h2, p {
+			font-size: 1.5em;
+		}
+
+		div, img {
+			position: absolute;
+		}
+		div {
+			width: 500px;
+			height: 500px;
+		}
+		
+		#right_div {
+			left: 500px;
+			border-left: 1px solid black;
+		}
+	</style>
+</head>
+<body onload="generateFaces()">
+	<h2>Matching Game</h2>
+	<p>Click on the extra smiling face on left side.</p>
+	<p id="para"> Level 1 :- </p>
+	<div id="left_div"></div>
+	<div id="right_div"></div>
+
+<!-- PART 1 ENDS -->
+
+<!-- PART 2 STARTS -->
+	
+	<script>
+		var numberOfFaces = 5;
+		var LeftSide = document.getElementById('left_div');
+		var count = 0;
+		function generateFaces() {
+
+		for (var i = 0; i < numberOfFaces; i++) {
+			var this_img = document.createElement("img");
+			this_img.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+			var top_position = Math.floor(Math.random() * 400);
+			var left_position = Math.floor(Math.random() * 400);
+			this_img.style.top = top_position + "px";
+			this_img.style.left = left_position + "px";
+			LeftSide.appendChild(this_img);
+			}
+
+// PART 2 ENDS
+
+// PART 3 STARTS
+
+		var RightSide = document.getElementById('right_div');
+		var leftsideimages = LeftSide.cloneNode(true);
+		leftsideimages.removeChild(leftsideimages.lastChild);
+		RightSide.appendChild(leftsideimages);
+
+// PART 3 ENDS		
+
+// PART 4 STARTS
+		count++;
+		var theBody = document.getElementsByTagName("body")[0];
+		LeftSide.lastChild.onclick = 
+		function nextround(event) {
+			event.stopPropagation();
+			
+			/* *** special trick to delete all previous nodes starts. *** */
+			while (LeftSide.firstChild) {
+				LeftSide.removeChild(LeftSide.firstChild);
+			}
+			while (RightSide.firstChild) {
+				RightSide.removeChild(RightSide.firstChild);
+			}
+			/* *** special trick to delete all previous nodes ends. *** */
+
+			numberOfFaces += 5;
+			generateFaces();
+
+			document.getElementById("para").innerHTML = "Level " + count + " :-" ;
+
+		};
+		
+		theBody.onclick = function gameOver() {
+			alert("Game Over!\n \n You played till " + (count - 1) + " levels!");
+			theBody.onclick = null;
+			LeftSide.lastChild.onclick = null;
+		};
+
+
+// PART 4 ENDS
+		}
+
+	</script>
+</body>
+</html>
