@@ -10,7 +10,7 @@
 
 >* [Week 1](http://rishavpandey.me/coursera-hku-assignment/week-1/)
 >* [Week 2](http://rishavpandey.me/coursera-hku-assignment/week-2/)
->* [Week 3](#)
+>* [Week 3](http://rishavpandey.me/coursera-hku-assignment/week-3/)
 
 ## Attention:  
 
