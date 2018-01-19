@@ -4,7 +4,7 @@
 
 #### Thanks for viewing my Assignment
 
-**_This is Week 2 Assignmet_**
+**_This is Week 3 Assignmet_**
 
 Click below to begin
 
@@ -16,4 +16,4 @@ Click below to begin
 
 - [Part 4, FINAL GAME](http://rishavpandey.me/coursera-hku-assignment/week-2/js_part2.html)
 
-- [**_Optional_** Colorful Squares](http://rishavpandey.me/coursera-hku-assignment/week-2/colorful_squares.html)
+- [**_Optional_** Colorful Squares](#)
