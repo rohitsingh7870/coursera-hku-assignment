@@ -8,12 +8,12 @@
 
 Click below to begin
 
-- [Part 1](http://rishavpandey.me/coursera-hku-assignment/week-2/js_part1.html)
+- [Part 1](http://rishavpandey.me/coursera-hku-assignment/week-3/js_part1.html)
 
-- [Part 2](http://rishavpandey.me/coursera-hku-assignment/week-2/js_part2.html)
+- [Part 2](http://rishavpandey.me/coursera-hku-assignment/week-3/js_part2.html)
 
-- [Part 3](http://rishavpandey.me/coursera-hku-assignment/week-2/js_part2.html)
+- [Part 3](http://rishavpandey.me/coursera-hku-assignment/week-3/js_part3.html)
 
-- [Part 4, FINAL GAME](http://rishavpandey.me/coursera-hku-assignment/week-2/js_part2.html)
+- [Part 4, FINAL GAME](http://rishavpandey.me/coursera-hku-assignment/week-3/js_part4.html)
 
 - [**_Optional_** Colorful Squares](#)
